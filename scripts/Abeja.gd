@@ -1,12 +1,8 @@
 extends CharacterBody2D
 
 @export var SPEED = 300
-@export var direction = Vector2(0,0)
-
-
-
-
-
+@export var d = Vector2(0,0)
+var direction = Vector2(0,0)
 signal l_aguijon(position,direction,r)
 
 func _physics_process(_delta):
@@ -16,14 +12,12 @@ func _physics_process(_delta):
 	velocity = direction * SPEED 
 	move_and_slide()
 func input(direction,rotation_degrees):
-	
-	var d = direction
 	var r = rotation
 	if Input.is_action_just_pressed("spacex"):
 		l_aguijon.emit($Marker2D.global_position,direction,r)
 		$disparo2.play()
 	if Input.is_action_just_pressed("up"):
-		d = Vector2(0,-1)
+		direction = Vector2(0,-1)
 		r = deg_to_rad(0)
 	elif Input.is_action_just_pressed("down"):
 		d = Vector2(0,1)
