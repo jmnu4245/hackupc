@@ -6,6 +6,7 @@ signal l_aguijon(nodo_emisor)
 
 
 func _physics_process(_delta):
+	$Sprite2D.play("idle")
 	# Add the gravity.
 	direction = input(direction,rotation_degrees)
 	print(direction)
