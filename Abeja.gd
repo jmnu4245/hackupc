@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
-
 @export var SPEED = 300
-@export var direction = Vector2(0,1)
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+@export var direction = Vector2(0,0)
+signal l_aguijon(nodo_emisor)
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Add the gravity.
 	direction = input(direction)
 	print(direction)
@@ -14,6 +13,8 @@ func _physics_process(delta):
 	move_and_slide()
 func input(direction):
 	var d = direction 
+	if Input.is_action_just_pressed("space"):
+		lanzar_aguijon()
 	if Input.is_action_just_pressed("up"):
 		d = Vector2(0,-1)
 	elif Input.is_action_just_pressed("down"):
@@ -26,5 +27,5 @@ func input(direction):
 		return direction
 	else:
 		return d
-
-
+func lanzar_aguijon():
+	l_aguijon.emit(l_aguijon,self)

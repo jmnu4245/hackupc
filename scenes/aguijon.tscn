@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://csqadxawr5ivt"]
+[gd_scene load_steps=4 format=3 uid="uid://csqadxawr5ivt"]
 
 [ext_resource type="Texture2D" uid="uid://cne5fwlmcaq16" path="res://sprites/image-removebg-preview (12).png" id="1_slq6v"]
+[ext_resource type="Script" path="res://scenes/aguijon.gd" id="1_tu7vt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyr82"]
 radius = 70.1142
 
 [node name="aguijon" type="Area2D"]
+script = ExtResource("1_tu7vt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kyr82")
