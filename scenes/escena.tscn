@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgal7ofef2nxa"]
+[gd_scene load_steps=8 format=3 uid="uid://dgal7ofef2nxa"]
 
 [ext_resource type="PackedScene" uid="uid://b1l66ykxh3fcx" path="res://scenes/abeja.tscn" id="1_bk6u3"]
 [ext_resource type="Script" path="res://scenes/escena.gd" id="1_s3sn6"]
+[ext_resource type="AudioStream" uid="uid://d3ijapjc088ql" path="res://sonidos/tararata.mp3" id="4_i4xdy"]
 [ext_resource type="Script" path="res://scripts/Abeja2.gd" id="4_ltyr3"]
+[ext_resource type="Script" path="res://scripts/musica.gd" id="5_fnqrj"]
+[ext_resource type="AudioStream" uid="uid://d2e7ud44xwvrd" path="res://sonidos/disparo.mp3" id="6_k73w4"]
+[ext_resource type="AudioStream" uid="uid://n1kvs25urp1j" path="res://sonidos/muerte.mp3" id="7_lu672"]
 
 [node name="Escena" type="Node2D"]
 script = ExtResource("1_s3sn6")
@@ -10,15 +14,39 @@ script = ExtResource("1_s3sn6")
 [node name="Abeja" parent="." instance=ExtResource("1_bk6u3")]
 position = Vector2(1, -4)
 
+[node name="disparo2" type="AudioStreamPlayer2D" parent="Abeja"]
+position = Vector2(-1, 4)
+stream = ExtResource("6_k73w4")
+
+[node name="muerte2" type="AudioStreamPlayer2D" parent="Abeja"]
+position = Vector2(-1, 4)
+stream = ExtResource("7_lu672")
+
 [node name="Abeja2" parent="." instance=ExtResource("1_bk6u3")]
 position = Vector2(219, -1)
 script = ExtResource("4_ltyr3")
+
+[node name="disparo2" type="AudioStreamPlayer2D" parent="Abeja2"]
+position = Vector2(-219, 1)
+stream = ExtResource("6_k73w4")
+
+[node name="muerte2" type="AudioStreamPlayer2D" parent="Abeja2"]
+position = Vector2(-219, 1)
+stream = ExtResource("7_lu672")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-13, -8)
 zoom = Vector2(2, 2)
 
 [node name="aguijones" type="Node2D" parent="."]
+
+[node name="musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i4xdy")
+volume_db = -38.401
+autoplay = true
+attenuation = 9.51366
+panning_strength = 0.91
+script = ExtResource("5_fnqrj")
 
 [connection signal="l_aguijon" from="Abeja" to="." method="_on_abeja_l_aguijon"]
 [connection signal="l_aguijon" from="Abeja2" to="." method="_on_abeja_l_aguijon"]

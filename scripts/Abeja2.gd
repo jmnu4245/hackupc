@@ -13,8 +13,9 @@ func _physics_process(_delta):
 func input(direction,rotation_degrees):
 	var d = direction
 	var r = rotation
-	if Input.is_action_just_pressed("spacex"):
+	if Input.is_action_just_pressed("space"):
 		l_aguijon.emit($Marker2D.global_position,direction,r)
+		$disparo2.play()
 	if Input.is_action_just_pressed("w"):
 		d = Vector2(0,-1)
 		r = deg_to_rad(0)
@@ -30,8 +31,9 @@ func input(direction,rotation_degrees):
 	if (d.dot(direction) == -1):
 		return direction
 		
-	else:
+	else :
 		rotation = r
 		return d
 func hit():
+	$muerte2.play()
 	queue_free()

@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1l66ykxh3fcx"]
+[gd_scene load_steps=10 format=3 uid="uid://b1l66ykxh3fcx"]
 
 [ext_resource type="Script" path="res://scripts/Abeja.gd" id="1_k3ve0"]
 [ext_resource type="Texture2D" uid="uid://do8ig06ksy1s4" path="res://sprites/MovimientoArriba_3.png" id="2_mn3m4"]
+[ext_resource type="AudioStream" uid="uid://d2e7ud44xwvrd" path="res://sonidos/disparo.mp3" id="3_1e022"]
+[ext_resource type="AudioStream" uid="uid://n1kvs25urp1j" path="res://sonidos/muerte.mp3" id="4_k87ow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v33qv"]
 radius = 23.0217
@@ -49,3 +51,9 @@ frame_progress = 0.561808
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, 44)
+
+[node name="disparo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1e022")
+
+[node name="muerte" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_k87ow")
