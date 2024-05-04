@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://coxf3lj4w661m"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_1ow12"]
+[ext_resource type="Texture2D" uid="uid://rejejroei5mv" path="res://sprites/_01544e3a-1e0c-4842-8f3c-8fcc6d9f2110.jpg" id="1_oetnj"]
+[ext_resource type="Script" path="res://Path2D.gd" id="2_kpn5v"]
+[ext_resource type="Texture2D" uid="uid://do8ig06ksy1s4" path="res://sprites/MovimientoArriba_3.png" id="2_w5057"]
+
+[sub_resource type="Curve2D" id="Curve2D_smqsj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 62, 411, 0, 0, 0, 0, 170, 302, 0, 0, 0, 0, 305, 358, 0, 0, 0, 0, 453, 443, 0, 0, 0, 0, 637, 130, 0, 0, 0, 0, 952, 44, 0, 0, 0, 0, 1216, 175, 0, 0, 0, 0, 1401, 218, 0, 0, 0, 0, 1539, -149, 0, 0, 0, 0, -219, -199, 0, 0, 0, 0, -271, 360, 0, 0, 0, 0, 55, 405, 0, 0, 0, 0, 62, 411)
+}
+point_count = 13
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1ndj"]
+atlas = ExtResource("2_w5057")
+region = Rect2(0, 0, 109, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3kc3"]
+atlas = ExtResource("2_w5057")
+region = Rect2(109, 0, 109, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n75qp"]
+atlas = ExtResource("2_w5057")
+region = Rect2(218, 0, 109, 109)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bonmg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1ndj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3kc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n75qp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ow12")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.18104, 0.779157)
+texture = ExtResource("1_oetnj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -20.0
+offset_right = 216.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="bee1" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="bee1"]
+curve = SubResource("Curve2D_smqsj")
+script = ExtResource("2_kpn5v")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="bee1/Path2D"]
+position = Vector2(62, 411)
+rotation = -0.790006
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bee1/Path2D/PathFollow2D"]
+position = Vector2(-2.11153, -2.13107)
+rotation = 1.4399
+sprite_frames = SubResource("SpriteFrames_bonmg")
+animation = &"idle"
+frame_progress = 0.106451
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
