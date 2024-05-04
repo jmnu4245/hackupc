@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3krugs7busaj"]
+[gd_scene load_steps=5 format=3 uid="uid://c3krugs7busaj"]
 
 [ext_resource type="PackedScene" uid="uid://b1l66ykxh3fcx" path="res://scenes/abeja.tscn" id="1_bk6u3"]
 [ext_resource type="Script" path="res://scenes/escena.gd" id="1_s3sn6"]
-[ext_resource type="PackedScene" path="res://tile base.tscn" id="2_c3igc"]
+[ext_resource type="PackedScene" uid="uid://hea8uabjdfhn" path="res://tile base.tscn" id="2_c3igc"]
+[ext_resource type="Script" path="res://scripts/Abeja2.gd" id="4_ltyr3"]
 
 [node name="Escena" type="Node2D"]
 script = ExtResource("1_s3sn6")
@@ -12,6 +13,10 @@ script = ExtResource("1_s3sn6")
 [node name="Abeja" parent="." instance=ExtResource("1_bk6u3")]
 position = Vector2(1, -4)
 
+[node name="Abeja2" parent="." instance=ExtResource("1_bk6u3")]
+position = Vector2(219, -1)
+script = ExtResource("4_ltyr3")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-13, -8)
 zoom = Vector2(2, 2)
@@ -19,3 +24,4 @@ zoom = Vector2(2, 2)
 [node name="aguijones" type="Node2D" parent="."]
 
 [connection signal="l_aguijon" from="Abeja" to="." method="_on_abeja_l_aguijon"]
+[connection signal="l_aguijon" from="Abeja2" to="." method="_on_abeja_l_aguijon"]
