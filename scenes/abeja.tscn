@@ -1,20 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1l66ykxh3fcx"]
+[gd_scene load_steps=8 format=3 uid="uid://b1l66ykxh3fcx"]
 
 [ext_resource type="Script" path="res://Abeja.gd" id="1_bcq8k"]
+[ext_resource type="Texture2D" uid="uid://do8ig06ksy1s4" path="res://sprites/MovimientoArriba_3.png" id="2_mn3m4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v33qv"]
-radius = 44.0114
+radius = 37.5766
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_42w3i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dhqv"]
+atlas = ExtResource("2_mn3m4")
+region = Rect2(0, 0, 109, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y4sd"]
+atlas = ExtResource("2_mn3m4")
+region = Rect2(109, 0, 109, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icg56"]
+atlas = ExtResource("2_mn3m4")
+region = Rect2(218, 0, 109, 109)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6b5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dhqv")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_7y4sd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icg56")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [node name="Abeja" type="CharacterBody2D"]
 script = ExtResource("1_bcq8k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(131, 77)
 shape = SubResource("CircleShape2D_v33qv")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(155, 106)
-scale = Vector2(20, 20)
-sprite_frames = SubResource("SpriteFrames_42w3i")
+position = Vector2(1, 12)
+sprite_frames = SubResource("SpriteFrames_n6b5e")
+animation = &"idle"
+frame_progress = 0.561808
