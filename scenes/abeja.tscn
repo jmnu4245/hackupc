@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1l66ykxh3fcx"]
 
-[ext_resource type="Script" path="res://Abeja.gd" id="1_bcq8k"]
+[ext_resource type="Script" path="res://scripts/Abeja.gd" id="1_k3ve0"]
 [ext_resource type="Texture2D" uid="uid://do8ig06ksy1s4" path="res://sprites/MovimientoArriba_3.png" id="2_mn3m4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v33qv"]
-radius = 37.5766
+radius = 23.0217
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dhqv"]
 atlas = ExtResource("2_mn3m4")
@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [node name="Abeja" type="CharacterBody2D"]
-script = ExtResource("1_bcq8k")
+script = ExtResource("1_k3ve0")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_v33qv")
@@ -46,3 +46,6 @@ position = Vector2(1, 12)
 sprite_frames = SubResource("SpriteFrames_n6b5e")
 animation = &"idle"
 frame_progress = 0.561808
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 44)
