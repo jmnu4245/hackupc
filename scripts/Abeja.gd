@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED = 300
 @export var direction = Vector2(0,0)
-signal l_aguijon(position,direction)
+signal l_aguijon(position,direction,r)
 
 func _physics_process(_delta):
 	$Sprite2D.play("idle")
