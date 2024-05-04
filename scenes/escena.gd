@@ -13,8 +13,6 @@ func _on_abeja_l_aguijon(pos,direction,rot):
 func _process(delta):
 	var pos1 = $Abeja.position
 	var pos2 = $Abeja2.position
-	print(abs(pos1.x))
-	print(abs(pos2.x))
 	var dif1 = pos1.x-pos2.x
 	var dif2 = pos1.y-pos2.y
 	
