@@ -17,7 +17,7 @@ config/icon="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionJugador1
 
 [autoload]
 
-Variables="*res://scripts/variables.gd"
+GLOBAL="*res://scripts/variables.gd"
 
 [display]
 

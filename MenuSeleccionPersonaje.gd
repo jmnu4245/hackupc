@@ -76,5 +76,5 @@ func desactivar_botones1(i: int) -> void:
 			$TextureButton7.button_pressed = false
 			$TextureButton8.button_pressed = true
 func save(abeja,abeja2):
-	var my_singleton = get_node("variables")
-	my_singleton.setabejas(abeja,abeja2)
+	get_node("/root/GLOBAL").abeja= abeja
+	get_node("/root/GLOBAL").abeja2= abeja2
