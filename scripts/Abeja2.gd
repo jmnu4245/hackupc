@@ -37,5 +37,5 @@ func input(direction,rotation_degrees):
 func hit():
 	$muerte2.play()
 	queue_free()
-	get_tree().change_scene_to_file("res://menu_final.tscn")
-	get_tree().paused = true
+	get_tree().change_scene_to_file("res://menu.tscn")
+	#get_tree().paused = true
