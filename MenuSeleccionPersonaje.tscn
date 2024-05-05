@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0g6dnyjlr0gt"]
+[gd_scene load_steps=4 format=3 uid="uid://cb0rbbhbuqsj8"]
 
 [ext_resource type="Texture2D" uid="uid://bxrkvacufns5o" path="res://sprites/Todo lo que ha hecho Pau/MenuSeleccion.png" id="1_6ypy6"]
 [ext_resource type="FontFile" uid="uid://j45r1x0dioeo" path="res://sprites/Todo lo que ha hecho Pau/Retro Gaming.ttf" id="2_eh3w0"]
