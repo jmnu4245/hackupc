@@ -7,3 +7,5 @@ var abeja2
 	#
 	## Cambiar la ruta del sprite 2
 #var abeja2sprite = "res://sprites/sprites abejas/MovimientoAbeja" + str(abeja2) + ".png"
+
+var winner

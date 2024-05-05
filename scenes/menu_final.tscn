@@ -55,11 +55,21 @@ offset_bottom = 1019.0
 [node name="Button" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 501.0
-offset_top = 330.0
-offset_right = 692.0
-offset_bottom = 386.0
+offset_left = 496.0
+offset_top = 375.0
+offset_right = 687.0
+offset_bottom = 431.0
 theme = SubResource("Theme_sht10")
 text = "GO TO THE MAIN"
+
+[node name="label_winner" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 487.0
+offset_top = 278.0
+offset_right = 709.0
+offset_bottom = 330.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
