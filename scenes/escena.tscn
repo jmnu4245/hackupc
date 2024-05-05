@@ -57,7 +57,7 @@ script = ExtResource("5_fnqrj")
 stream = ExtResource("8_kab86")
 script = ExtResource("9_prw4r")
 
-[node name="mapas" parent="." instance=ExtResource("10_apt8p")]
+[node name="Mapas" parent="." instance=ExtResource("10_apt8p")]
 
 [connection signal="l_aguijon" from="Abeja" to="." method="_on_abeja_l_aguijon"]
 [connection signal="l_aguijon" from="Abeja2" to="." method="_on_abeja_l_aguijon"]

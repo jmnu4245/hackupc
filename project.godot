@@ -13,7 +13,7 @@ config_version=5
 config/name="HackUPC juego"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionJugador1Abeja1.png"
 
 [display]
 
