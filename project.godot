@@ -15,6 +15,10 @@ run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionJugador1Abeja1.png"
 
+[autoload]
+
+Variables="*res://scripts/variables.gd"
+
 [display]
 
 window/size/viewport_width=1200
