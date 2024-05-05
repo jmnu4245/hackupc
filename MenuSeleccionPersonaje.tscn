@@ -1,7 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb0rbbhbuqsj8"]
+[gd_scene load_steps=16 format=3 uid="uid://cb0rbbhbuqsj8"]
 
 [ext_resource type="Texture2D" uid="uid://bxrkvacufns5o" path="res://sprites/Todo lo que ha hecho Pau/MenuSeleccion.png" id="1_6ypy6"]
-[ext_resource type="FontFile" uid="uid://j45r1x0dioeo" path="res://sprites/Todo lo que ha hecho Pau/Retro Gaming.ttf" id="2_eh3w0"]
+[ext_resource type="Script" path="res://MenuSeleccionPersonaje.gd" id="1_c8run"]
+[ext_resource type="Texture2D" uid="uid://bp6mrx2hk06pp" path="res://sprites/Todo lo que ha hecho Pau/Abeja3/MenuSeleccionVacioAbeja3.png" id="1_kwnws"]
+[ext_resource type="Texture2D" uid="uid://dyfh8x4ynb14t" path="res://sprites/Todo lo que ha hecho Pau/Abeja4/MenuSeleccionJugador1Abeja4.png" id="1_yghs2"]
+[ext_resource type="Texture2D" uid="uid://kml51k3jk6m7" path="res://sprites/Todo lo que ha hecho Pau/Abeja4/MenuSeleccionJugador2Abeja4.png" id="2_bkajh"]
+[ext_resource type="Texture2D" uid="uid://dohrjbqhnwdnp" path="res://sprites/Todo lo que ha hecho Pau/Abeja3/MenuSeleccionJugador1Abeja3.png" id="2_hatgl"]
+[ext_resource type="Texture2D" uid="uid://1c48ysp8x7fc" path="res://sprites/Todo lo que ha hecho Pau/Abeja3/MenuSeleccionJugador2Abeja3.png" id="2_yqrop"]
+[ext_resource type="Texture2D" uid="uid://ctsff7kewuvaw" path="res://sprites/Todo lo que ha hecho Pau/Abeja4/MenuSeleccionVacioAbeja4.png" id="3_557dt"]
+[ext_resource type="Texture2D" uid="uid://j6u0d4o7qu06" path="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionJugador1Abeja1.png" id="4_7d7v3"]
+[ext_resource type="Texture2D" uid="uid://la2glb15x86s" path="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionJugador2Abeja1.png" id="5_j854x"]
+[ext_resource type="Texture2D" uid="uid://82hjptp4sgt4" path="res://sprites/Todo lo que ha hecho Pau/Abeja1/MenuSeleccionVacioAbeja1.png" id="6_pbxv4"]
+[ext_resource type="Texture2D" uid="uid://dfvas40bxaa8k" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionJugador1Abeja2.png" id="10_2o1y3"]
+[ext_resource type="Texture2D" uid="uid://dymcym8vnpt5t" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionJugador2Abeja2.png" id="11_w8xnx"]
+[ext_resource type="Texture2D" uid="uid://tlh7cl1bmlpy" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionVacioAbeja2.png" id="12_vwxqg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swjgv"]
 texture = ExtResource("1_6ypy6")
@@ -13,28 +25,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_c8run")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 445.0
+offset_right = 872.0
+offset_bottom = 577.0
+action_mode = 0
+texture_normal = ExtResource("1_yghs2")
+texture_pressed = ExtResource("2_bkajh")
+texture_hover = ExtResource("3_557dt")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 208.0
+offset_right = 384.0
+offset_bottom = 340.0
+action_mode = 0
+texture_normal = ExtResource("4_7d7v3")
+texture_pressed = ExtResource("5_j854x")
+texture_hover = ExtResource("6_pbxv4")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 445.0
+offset_right = 466.0
+offset_bottom = 577.0
+action_mode = 0
+texture_normal = ExtResource("2_hatgl")
+texture_pressed = ExtResource("2_yqrop")
+texture_hover = ExtResource("1_kwnws")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 208.0
+offset_right = 928.0
+offset_bottom = 340.0
+action_mode = 0
+texture_normal = ExtResource("10_2o1y3")
+texture_pressed = ExtResource("11_w8xnx")
+texture_hover = ExtResource("12_vwxqg")
+
+[node name="Aceptar" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-offset_left = -24.0
-offset_top = 8.0
-offset_right = 208.0
-offset_bottom = 136.0
+offset_left = -179.0
+offset_top = -56.0
+offset_right = 1464.0
+offset_bottom = 913.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_swjgv")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 17.0
-offset_top = 23.0
-offset_right = 152.0
-offset_bottom = 44.0
-theme_override_fonts/font = ExtResource("2_eh3w0")
-text = "Biba el secso
-"
-
-[node name="Button" type="Button" parent="CanvasLayer/Label"]
-layout_mode = 0
-offset_left = 71.0
-offset_top = 73.0
-offset_right = 79.0
-offset_bottom = 81.0
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="Aceptar" to="." method="_on_button_pressed"]

@@ -75,7 +75,8 @@ text = "Play"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Settings"
+text = "Choose_character
+"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2

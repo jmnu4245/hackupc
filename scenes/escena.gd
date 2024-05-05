@@ -1,13 +1,14 @@
 extends Node2D
 var aguijon_ = load("res://scenes/aguijon.tscn")
-
-func _ready():
-	randomize()
-	var string = elegir_mapa_al_azar()
-	var map = load(string)
-	get_tree().get_root().add_child(map.instantiate())
 const radioCS = 23
 var near = true
+func _ready():
+	#randomize()
+	#var string = elegir_mapa_al_azar()
+	#var map = load(string)
+	#get_tree().get_root().add_child(map.instantiate())
+	pass
+
 
 func _on_abeja_l_aguijon(pos,direction,rot):
 	var aguijon = aguijon_.instantiate() as Area2D
@@ -15,11 +16,10 @@ func _on_abeja_l_aguijon(pos,direction,rot):
 	aguijon.rotation = rot
 	aguijon.direction = direction
 	$aguijones.add_child(aguijon)
-func elegir_mapa_al_azar():
-	var i = randi() % 3
-	var string = "res://mapas/mapa"+ str(i) +".tscn"
-	return string
-
+#func elegir_mapa_al_azar():
+	#var i = randi() % 3
+	#var string = "res://mapas/mapa"+ str(i) +".tscn"
+	#return string
 func _process(delta):
 	var pos1 = $Abeja.position
 	var pos2 = $Abeja2.position
