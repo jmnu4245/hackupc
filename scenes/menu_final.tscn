@@ -1,28 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbvg82crvblvt"]
+[gd_scene load_steps=6 format=3 uid="uid://cbvg82crvblvt"]
 
 [ext_resource type="FontFile" uid="uid://j45r1x0dioeo" path="res://sprites/Todo lo que ha hecho Pau/Retro Gaming.ttf" id="1_lib0g"]
+[ext_resource type="Script" path="res://scenes/menu_final.gd" id="1_s822q"]
+[ext_resource type="Texture2D" uid="uid://rejejroei5mv" path="res://sprites/_01544e3a-1e0c-4842-8f3c-8fcc6d9f2110.jpg" id="3_tnsam"]
 
 [sub_resource type="Theme" id="Theme_2wpmd"]
 default_font = ExtResource("1_lib0g")
 
-[node name="menu final" type="Control"]
+[sub_resource type="Theme" id="Theme_sht10"]
+
+[node name="menu_final" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s822q")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 343.0
+offset_top = 156.0
+offset_right = 847.0
+offset_bottom = 517.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 342.0
+offset_top = 217.0
+offset_right = 846.0
+offset_bottom = 297.0
 theme = SubResource("Theme_2wpmd")
-text = "END OF THE GAME!"
+theme_type_variation = &"HeaderLarge"
+text = "GAME OVER!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -3
+layout_mode = 0
+offset_right = 1195.0
+offset_bottom = 1024.0
+texture = ExtResource("3_tnsam")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.494118)
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 1197.0
+offset_bottom = 1019.0
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 501.0
+offset_top = 330.0
+offset_right = 692.0
+offset_bottom = 386.0
+theme = SubResource("Theme_sht10")
+text = "GO TO THE MAIN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
