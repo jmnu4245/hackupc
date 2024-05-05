@@ -3,6 +3,7 @@ var aguijon_ = load("res://scenes/aguijon.tscn")
 const radioCS = 23
 var near = true
 func _ready():
+	
 	#randomize()
 	#var string = elegir_mapa_al_azar()
 	#var map = load(string)
