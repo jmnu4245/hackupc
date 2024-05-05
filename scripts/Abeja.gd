@@ -5,6 +5,7 @@ extends CharacterBody2D
 var direction = Vector2(0,0)
 signal l_aguijon(position,direction,r)
 
+
 func _physics_process(_delta):
 	$Sprite2D.play("idle")
 
@@ -39,4 +40,6 @@ func input(direction,rotation_degrees):
 func hit():
 	$muerte2.play()
 	queue_free()
+	get_tree().change_scene_to_file("res://menu_final.tscn")
 	get_tree().paused = true
+
