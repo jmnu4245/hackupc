@@ -17,6 +17,8 @@ func input(direction,rotation_degrees):
 	if Input.is_action_just_pressed("spacex"):
 		l_aguijon.emit($Marker2D.global_position,direction,r)
 		$disparo2.play()
+		get_tree().create_timer(1).timeout
+		
 	if Input.is_action_just_pressed("up"):
 		d= Vector2(0,-1)
 		r = deg_to_rad(0)
@@ -37,3 +39,4 @@ func input(direction,rotation_degrees):
 func hit():
 	$muerte2.play()
 	queue_free()
+	get_tree().paused = true

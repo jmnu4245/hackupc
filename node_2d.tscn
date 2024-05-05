@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://we3fikuorgyr"]
+
+[ext_resource type="PackedScene" uid="uid://dgal7ofef2nxa" path="res://scenes/escena.tscn" id="2_v3rch"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 3
+
+[node name="Escena" parent="." instance=ExtResource("2_v3rch")]
+process_mode = 1

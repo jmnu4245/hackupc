@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbvg82crvblvt"]
+
+[ext_resource type="FontFile" uid="uid://j45r1x0dioeo" path="res://sprites/Todo lo que ha hecho Pau/Retro Gaming.ttf" id="1_lib0g"]
+
+[sub_resource type="Theme" id="Theme_2wpmd"]
+default_font = ExtResource("1_lib0g")
+
+[node name="menu final" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = SubResource("Theme_2wpmd")
+text = "END OF THE GAME!"
+horizontal_alignment = 1
+vertical_alignment = 1

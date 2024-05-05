@@ -36,3 +36,4 @@ func input(direction,rotation_degrees):
 func hit():
 	$muerte2.play()
 	queue_free()
+	get_tree().paused = true
