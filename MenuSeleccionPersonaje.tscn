@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cb0rbbhbuqsj8"]
+[gd_scene load_steps=17 format=3 uid="uid://cb0rbbhbuqsj8"]
 
 [ext_resource type="Texture2D" uid="uid://bxrkvacufns5o" path="res://sprites/Todo lo que ha hecho Pau/MenuSeleccion.png" id="1_6ypy6"]
 [ext_resource type="Script" path="res://MenuSeleccionPersonaje.gd" id="1_c8run"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dfvas40bxaa8k" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionJugador1Abeja2.png" id="10_2o1y3"]
 [ext_resource type="Texture2D" uid="uid://dymcym8vnpt5t" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionJugador2Abeja2.png" id="11_w8xnx"]
 [ext_resource type="Texture2D" uid="uid://tlh7cl1bmlpy" path="res://sprites/Todo lo que ha hecho Pau/Abeja2/MenuSeleccionVacioAbeja2.png" id="12_vwxqg"]
+[ext_resource type="Texture2D" uid="uid://d4du6c8apvi0k" path="res://image-removebg-preview (13).png" id="14_abt0v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swjgv"]
 texture = ExtResource("1_6ypy6")
@@ -23,61 +24,16 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -56.0
+offset_right = -34.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c8run")
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 545.0
-offset_top = 445.0
-offset_right = 872.0
-offset_bottom = 577.0
-action_mode = 0
-texture_normal = ExtResource("1_yghs2")
-texture_pressed = ExtResource("2_bkajh")
-texture_hover = ExtResource("3_557dt")
-
-[node name="TextureButton2" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 208.0
-offset_right = 384.0
-offset_bottom = 340.0
-action_mode = 0
-texture_normal = ExtResource("4_7d7v3")
-texture_pressed = ExtResource("5_j854x")
-texture_hover = ExtResource("6_pbxv4")
-
-[node name="TextureButton3" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 139.0
-offset_top = 445.0
-offset_right = 466.0
-offset_bottom = 577.0
-action_mode = 0
-texture_normal = ExtResource("2_hatgl")
-texture_pressed = ExtResource("2_yqrop")
-texture_hover = ExtResource("1_kwnws")
-
-[node name="TextureButton4" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 601.0
-offset_top = 208.0
-offset_right = 928.0
-offset_bottom = 340.0
-action_mode = 0
-texture_normal = ExtResource("10_2o1y3")
-texture_pressed = ExtResource("11_w8xnx")
-texture_hover = ExtResource("12_vwxqg")
-
-[node name="Aceptar" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+layer = -1
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 offset_left = -179.0
@@ -86,8 +42,72 @@ offset_right = 1464.0
 offset_bottom = 913.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_swjgv")
 
+[node name="TextureButton" type="TextureButton" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 558.0
+offset_top = 445.0
+offset_right = 885.0
+offset_bottom = 577.0
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("1_yghs2")
+texture_pressed = ExtResource("2_bkajh")
+texture_hover = ExtResource("3_557dt")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 232.0
+offset_right = 466.0
+offset_bottom = 364.0
+action_mode = 0
+texture_normal = ExtResource("4_7d7v3")
+texture_pressed = ExtResource("5_j854x")
+texture_hover = ExtResource("6_pbxv4")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 445.0
+offset_right = 538.0
+offset_bottom = 577.0
+action_mode = 0
+texture_normal = ExtResource("2_hatgl")
+texture_pressed = ExtResource("2_yqrop")
+texture_hover = ExtResource("1_kwnws")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 607.0
+offset_top = 232.0
+offset_right = 934.0
+offset_bottom = 364.0
+action_mode = 0
+texture_normal = ExtResource("10_2o1y3")
+texture_pressed = ExtResource("11_w8xnx")
+texture_hover = ExtResource("12_vwxqg")
+
+[node name="Guardar elección" type="Button" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 619.0
+offset_right = 675.0
+offset_bottom = 684.0
+text = "Guardar"
+
+[node name="volver atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 130.0
+offset_right = 647.0
+offset_bottom = 638.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("14_abt0v")
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
 [connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
-[connection signal="pressed" from="Aceptar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Guardar elección" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="volver atras" to="." method="_on_button_pressed"]
