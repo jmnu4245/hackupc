@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0g6dnyjlr0gt"]
+
+[ext_resource type="Texture2D" uid="uid://bxrkvacufns5o" path="res://sprites/Todo lo que ha hecho Pau/MenuSeleccion.png" id="1_6ypy6"]
+[ext_resource type="FontFile" uid="uid://j45r1x0dioeo" path="res://sprites/Todo lo que ha hecho Pau/Retro Gaming.ttf" id="2_eh3w0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swjgv"]
+texture = ExtResource("1_6ypy6")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = -24.0
+offset_top = 8.0
+offset_right = 208.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_swjgv")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 17.0
+offset_top = 23.0
+offset_right = 152.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("2_eh3w0")
+text = "Biba el secso
+"
+
+[node name="Button" type="Button" parent="CanvasLayer/Label"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 73.0
+offset_right = 79.0
+offset_bottom = 81.0
