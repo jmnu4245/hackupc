@@ -7,9 +7,10 @@ signal l_aguijon(position,direction,r)
 
 func _physics_process(_delta):
 	$Sprite2D.play("idle")
-	# Add the gravity.
+
 	direction = input(direction,rotation_degrees)
 	velocity = direction * SPEED 
+	print(velocity)
 	move_and_slide()
 func input(direction,rotation_degrees):
 	var r = rotation

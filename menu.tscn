@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://coxf3lj4w661m"]
+[gd_scene load_steps=8 format=3 uid="uid://m5d8kkrwsnd2"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_1ow12"]
 [ext_resource type="Texture2D" uid="uid://rejejroei5mv" path="res://sprites/_01544e3a-1e0c-4842-8f3c-8fcc6d9f2110.jpg" id="1_oetnj"]
 [ext_resource type="Texture2D" uid="uid://do8ig06ksy1s4" path="res://sprites/MovimientoArriba_3.png" id="2_w5057"]
 
@@ -46,7 +45,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1ow12")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
