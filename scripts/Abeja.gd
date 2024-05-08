@@ -50,5 +50,6 @@ func hit():
 	$muerte2.play()
 	get_tree().change_scene_to_file("res://scenes/menu_final.tscn")
 	queue_free()
+	GLOBAL.winner = "LEFT PLAYER"
 	#get_tree().paused = true
 

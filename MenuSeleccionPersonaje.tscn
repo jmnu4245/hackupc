@@ -153,7 +153,16 @@ offset_left = 338.0
 offset_top = 176.0
 offset_right = 453.0
 offset_bottom = 216.0
-text = "First player
+text = "FIRST PLAYER
+"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 176.0
+offset_right = 852.0
+offset_bottom = 216.0
+text = "RIGHT PLAYER
 "
 
 [connection signal="pressed" from="TextureButton1" to="." method="_on_texture_button_1_pressed"]
