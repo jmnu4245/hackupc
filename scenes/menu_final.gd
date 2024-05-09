@@ -5,4 +5,4 @@ func _on_button_pressed():
 
 
 func _process(delta):
-	$label_winner.text = "WINNER: " + GLOBAL.winner		
+	$label_winner.text = "WINNER: " + GLOBAL.winner

@@ -4,11 +4,21 @@ extends CharacterBody2D
 @export var d = Vector2(0,0)
 var direction = Vector2(0,0)
 signal l_aguijon(position,direction,r)
-
-
+var abeja
+var color:AnimatedSprite2D
+func _ready():
+	abeja = GLOBAL.abeja
+	if (abeja == 1):
+		color = %color1_1
+	elif (abeja == 2):
+		color=%color2_1
+	elif (abeja == 3):
+		color=%color3_1
+	else:	
+		color=%color4_1
+	color.visible = true
 func _physics_process(_delta):
-	$Sprite2D.play("idle")
-
+	color.play("idle")
 	direction = input(direction,rotation_degrees)
 	velocity = direction * SPEED 
 	print(velocity)
@@ -19,7 +29,6 @@ func input(direction,rotation_degrees):
 		l_aguijon.emit($Marker2D.global_position,direction,r)
 		$disparo2.play()
 		get_tree().create_timer(1).timeout
-		
 	if Input.is_action_just_pressed("up"):
 		d= Vector2(0,-1)
 		r = deg_to_rad(0)
@@ -42,6 +51,5 @@ func hit():
 	get_tree().change_scene_to_file("res://scenes/menu_final.tscn")
 	queue_free()
 	GLOBAL.winner = "LEFT PLAYER"
-	print(GLOBAL.winner)
-
+	#get_tree().paused = true
 

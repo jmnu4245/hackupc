@@ -75,6 +75,6 @@ func desactivar_botones1(i: int) -> void:
 			$TextureButton6.button_pressed = false
 			$TextureButton7.button_pressed = false
 			$TextureButton8.button_pressed = true
-func save(abeja,abeja2):
+func save(abeja2,abeja):
 	get_node("/root/GLOBAL").abeja= abeja
 	get_node("/root/GLOBAL").abeja2= abeja2
