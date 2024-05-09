@@ -149,12 +149,20 @@ icon = ExtResource("14_abt0v")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 338.0
-offset_top = 176.0
-offset_right = 453.0
-offset_bottom = 216.0
-text = "First player
+offset_left = 348.0
+offset_top = 196.0
+offset_right = 463.0
+offset_bottom = 236.0
+text = "LEFT PLAYER
 "
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 741.0
+offset_top = 203.0
+offset_right = 856.0
+offset_bottom = 243.0
+text = "RIGHT PLAYER"
 
 [connection signal="pressed" from="TextureButton1" to="." method="_on_texture_button_1_pressed"]
 [connection signal="pressed" from="TextureButton5" to="." method="_on_texture_button_5_pressed"]
