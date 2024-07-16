@@ -165,7 +165,7 @@ offset_bottom = 216.0
 text = "RIGHT PLAYER
 "
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label3" type="Label" parent="."]
 layout_mode = 0
 offset_left = 741.0
 offset_top = 203.0
